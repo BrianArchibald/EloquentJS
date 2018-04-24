@@ -249,3 +249,40 @@ console.log(JSON.parse(string).events);
 
 
 
+///// Methods   /////
+
+
+let rabbit = {};
+rabbit.speak = function(line) {
+console.log(`The rabbit says '${line}'`);
+};
+rabbit.speak("I'm alive.");
+// → The rabbit says 'I'm alive.'
+
+
+
+////// Prototypes  ////
+
+//you can use object.creat to creat an object with a specific Prototypes
+
+let protoRabbit = {
+speak(line) {
+console.log(`The ${this.type} rabbit says '${line}'`);
+}
+};
+let killerRabbit = Object.create(protoRabbit);
+killerRabbit.type = "killer";
+killerRabbit.speak("SKREEEE!");
+// → The killer rabbit says 'SKREEEE!'
+
+
+
+////// Map ////
+
+let ages = new Nap();
+
+ages.set('Boris', 39);
+
+console.log(`Boris is ${ages.get('Boris')}`); /// Boris is 39
+
+//set, get, and has are part of Map
