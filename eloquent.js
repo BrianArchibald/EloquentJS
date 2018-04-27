@@ -286,3 +286,12 @@ ages.set('Boris', 39);
 console.log(`Boris is ${ages.get('Boris')}`); /// Boris is 39
 
 //set, get, and has are part of Map
+
+/// Polymorphism ///
+//can work with diff types of values as long as the use the interface (such as toString)
+
+Rabbit.prototype.toString = function() {
+return `a ${this.type} rabbit`;
+};
+console.log(String(blackRabbit));
+// → a black rabbit
